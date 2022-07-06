@@ -1,0 +1,8 @@
+xepdb1 =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = tcp)(HOST = cs174a.cs.ucsb.edu)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = xepdb1)
+    )
+  )
