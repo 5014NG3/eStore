@@ -14,6 +14,7 @@ Connect: used to connect to the sqlite database.
 Ubuntu/Linux: 
 
 install sqlite3: sudo apt-get install sqlite3
+
 install java: sudo apt install openjdk-11-jdk-headless 
 
 navigate to eStore/sqlite/db
@@ -23,10 +24,12 @@ then on the command line do: sqlite3 chinook.db
 
 download sqlite-jdbc-driver: https://www.sqlitetutorial.net/sqlite-java/sqlite-jdbc-driver/
 
-if you need a different version put in "/eStore/sqlite/java/connect/net/sqlitetutorial" with the java files. Then do javac *.java to compile
+if you need a different version put it in "/eStore/sqlite/java/connect/net/sqlitetutorial" with the java files. Then do javac *.java to compile inside the same folder.
 
-After the java files are compiled do: 
+After the java files are compiled do inside the previously mentioned folder location: 
 
 java -classpath ".:sqlite-jdbc-3.36.0.3.jar" Connect 
+
+
 
 
