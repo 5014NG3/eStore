@@ -1,32 +1,32 @@
 # eStore
-Simple eStore that allows you to search,checkout, and manage items that are sold by an arbitrary store. There is also a warehouse that keeps track of the 
-different items that are provided to the store. The warehouse inventory is updated dynamically with each purchase of a customer or manager modifications to 
-the stock. The data held in the store and warehouse are stored with a SQL database. Java is used to drive the actions of a customer or manager that purchases
-items or modifies the stock levels and item descriptions of the store or warehouse
+Emart: User is able to look at items that eStore has in stock. Can use various search parameters to look for items
+
+Edepot: Used to fulfill orders and replenish orders once an item drops below the stock threshold. A manager is also able to: order,modify,and delete items. They can also modify a particular customer and their attributes. 
+
+UserInterface: driver for the functions defined in Emart and Edepot
+
+Connect: used to connect to the sqlite database.
+
 
 
 # Setup:
 
-Prereq: have openjdk-11-jdk to work with the ojdbc11.jar
+Ubuntu/Linux: 
 
-create a folder to keep ojdbc11.jar
+install sqlite3: sudo apt-get install sqlite3
+install java: sudo apt install openjdk-11-jdk-headless 
 
-then do pwd in the folder to get the full path to ojdbc11.jar
+navigate to eStore/sqlite/db
 
-If there is a name with spaces used on one of the folders leading to 
-ojdbc11.jar, put the whole path in double quotes. 
+then on the command line do: sqlite3 chinook.db
+(change chinook to whatever you want just make sure to follow up with the necessary changes throughout the files)
 
-example : 
-export CLASSPATH="/student/first last/OracleTest/ojdbc11.jar":$CLASSPATH
+download sqlite-jdbc-driver: https://www.sqlitetutorial.net/sqlite-java/sqlite-jdbc-driver/
 
-to compile the java files do the following:
-javac -classpath ojdbc11.jar src/*.java
+if you need a different version put in "/eStore/sqlite/java/connect/net/sqlitetutorial" with the java files. Then do javac *.java to compile
 
-then execute OracleCon by entering the src folder and doing:
-ex: cd src
-java OracleCon
+After the java files are compiled do: 
+
+java -classpath ".:sqlite-jdbc-3.36.0.3.jar" Connect 
 
 
-# TODO:
-
-show how to create local sql database and connect to it
